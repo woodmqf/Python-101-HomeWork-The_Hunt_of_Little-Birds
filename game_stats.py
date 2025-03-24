@@ -21,11 +21,11 @@ class GameStats:
 
     def high_score_save(self):
         # 存储最高分
-        with open("high_score_save.csv",'w') as file_object:
+        with open("high_score_save.txt",'w',encoding= "utf-8") as file_object:
             high_score = self.high_score
             file_object.write(str(high_score))
 
     def high_score_read(self):
         # 读取最高分
-        with open("high_score_save.csv") as file_object:
+        with open("high_score_save.txt",encoding= "utf-8") as file_object:
             self.high_score = int(file_object.read())
